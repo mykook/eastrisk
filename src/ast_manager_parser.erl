@@ -20,6 +20,8 @@
 -define(warning(S), error_logger:info_report(["WARNING: ", lists:flatten(S)])).
 %-define(warning, ok).
 
+-compile({no_auto_import,[binary_to_integer/1]}).
+-compile({no_auto_import,[binary_to_float/1]}).
 %% -----------------------------------------------------------------------------
 %% @spec parse_package(Package::List) ->
 %%          {Record, ActionID}
